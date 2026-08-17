@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>tagc — つくったもの置き場</title>
+<meta name="description" content="tagc が個人でつくったアプリ・Webサービスの置き場所です。">
+<link rel="canonical" href="https://tagc.works/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="tagc — つくったもの置き場">
+<meta property="og:description" content="tagc が個人でつくったアプリ・Webサービスの置き場所です。">
+<meta property="og:url" content="https://tagc.works/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+<!-- Google Analytics（測定IDを差し替える） -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
+gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+
+<style>
+:root{
+  --paper:#F6F3EC;
+  --ink:#171614;
+  --sub:#6E695E;
+  --line:#D8D2C4;
+  --accent:#C8452B;
+  --card:#FFFDF8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:var(--paper);color:var(--ink);
+  font-family:"Zen Kaku Gothic New",system-ui,sans-serif;
+  line-height:1.85;-webkit-font-smoothing:antialiased;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px);
+  background-size:100% 34px;background-position:0 -1px;
+}
+.wrap{max-width:760px;margin:0 auto;padding:0 22px}
+.mono{font-family:"IBM Plex Mono",ui-monospace,monospace;letter-spacing:.06em}
+
+/* ---- header ---- */
+header{padding:56px 0 20px}
+.brand{display:flex;align-items:baseline;gap:12px}
+.brand h1{font-size:38px;font-weight:900;letter-spacing:-.02em;line-height:1}
+.brand .dot{width:11px;height:11px;background:var(--accent);border-radius:50%;flex:none}
+.brand .tld{font-size:12px;color:var(--sub)}
+.lede{margin-top:26px;font-size:19px;font-weight:500;max-width:34em}
+.lede b{background:linear-gradient(transparent 62%,#F5D9A8 62%);font-weight:700}
+.meta{margin-top:18px;font-size:12px;color:var(--sub)}
+
+/* ---- section ---- */
+section{padding:44px 0}
+.slabel{font-size:11px;color:var(--sub);border-bottom:2px solid var(--ink);
+  padding-bottom:7px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:end}
+.slabel b{font-size:13px;color:var(--ink);letter-spacing:.14em}
+
+/* ---- projects: 台帳スタイル ---- */
+.item{display:block;text-decoration:none;color:inherit;border-bottom:1px solid var(--line);
+  padding:22px 4px 20px;position:relative;transition:background .18s,padding .18s}
+.item:hover,.item:focus-visible{background:var(--card);padding-left:14px;padding-right:14px;outline:none}
+.item .no{font-size:11px;color:var(--sub)}
+.head{display:flex;align-items:baseline;gap:11px;flex-wrap:wrap;margin-top:3px}
+.head h3{font-size:22px;font-weight:900;letter-spacing:-.01em}
+.chip{font-size:10px;padding:3px 9px;border-radius:99px;border:1px solid var(--line);
+  color:var(--sub);background:var(--card);white-space:nowrap}
+.chip.live{border-color:var(--accent);color:var(--accent)}
+.chip.wip{border-style:dashed}
+.desc{margin-top:7px;font-size:15px;color:#3B382F;max-width:40em}
+.tags{margin-top:11px;display:flex;gap:7px;flex-wrap:wrap}
+.tags span{font-size:10.5px;color:var(--sub)}
+.tags span::before{content:"#";opacity:.5}
+.go{position:absolute;right:4px;bottom:20px;font-size:12px;color:var(--accent);opacity:0;transition:opacity .18s,transform .18s}
+.item:hover .go,.item:focus-visible .go{opacity:1;transform:translateX(-6px)}
+
+/* ---- about / contact ---- */
+.contact{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:22px;
+  display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.contact .t{font-size:13px;color:var(--sub)}
+.contact a{font-size:20px;font-weight:700;color:var(--ink);text-decoration:none;
+  border-bottom:2px solid var(--accent);padding-bottom:2px}
+footer{padding:40px 0 60px;font-size:11px;color:var(--sub);
+  border-top:1px solid var(--line);margin-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+footer a{color:var(--sub)}
+@media (max-width:560px){
+  .brand h1{font-size:32px}.lede{font-size:17px}.head h3{font-size:19px}
+  .go{display:none}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="brand">
+    <span class="dot"></span>
+    <h1 class="mono">tagc</h1>
+    <span class="tld mono">.works</span>
+  </div>
+  <p class="lede">個人でつくったものを置いておく場所です。<b>身のまわりの困りごと</b>から始めて、だいたい自分か家族が最初のユーザーになっています。</p>
+  <p class="meta mono">PERSONAL PROJECTS / TOKYO</p>
+</header>
+
+<section>
+  <div class="slabel mono"><b>WORKS</b><span>更新 2026.08</span></div>
+
+  <!-- ▼ プロジェクトを増やすときは、この <a class="item"> ブロックを複製する -->
+  <a class="item" href="/eigo-quiz/">
+    <div class="no mono">001</div>
+    <div class="head">
+      <h3>えいご シールクイズ</h3>
+      <span class="chip live mono">LIVE</span>
+      <span class="chip mono">Web</span>
+    </div>
+    <p class="desc">5歳からの英単語クイズ。読み上げつきの4択で、全300語をシールを集めながら覚えられます。6歳の娘が英語の文字を読めなくても遊べるように、音声と絵だけで完結させました。</p>
+    <div class="tags"><span>子ども向け</span><span>PWA</span><span>音声読み上げ</span><span>300語</span></div>
+    <span class="go mono">OPEN →</span>
+  </a>
+
+</section>
+
+<section>
+  <div class="slabel mono"><b>CONTACT</b></div>
+  <div class="contact">
+    <span class="t">ご意見・不具合の報告・お仕事のご相談</span>
+    <a href="mailto:hey@tagc.works">hey@tagc.works</a>
+  </div>
+</section>
+
+<footer>
+  <span class="mono">© 2026 tagc</span>
+  <span class="mono"><a href="/eigo-quiz/for-parents/">えいごクイズについて</a></span>
+</footer>
+
+</div>
+</body>
+</html>
