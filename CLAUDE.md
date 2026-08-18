@@ -13,7 +13,13 @@ https://tagc.works/ のトップページ。GitHub Pages のユーザーサイ�
 
 ## 構成
 
-`index.html` 1枚のみ。フレームワークなし、外部依存は Google Fonts だけ。
+- `index.html` — トップページ。フレームワークなし、外部依存は Google Fonts だけ
+- `hannya/` — 毎日般若心経（iOS/Android）のLP。旧 hannya.app から移設したもの。
+  `index.html` / `privacy.html` / `terms.html` と画像。リンクはすべて相対パス。
+  eigo-quiz / sansu-quiz と違い別リポジトリにしていないのは、
+  hannya-lp リポジトリを hannya.app からのリダイレクト置き場として残しているため
+- `app-ads.txt` — AdMob用。毎日般若心経のストア掲載URLがこのドメインなので、
+  ドメイン直下に置く必要がある。**消さない**
 
 ## デザイン
 
