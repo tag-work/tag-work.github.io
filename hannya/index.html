@@ -164,7 +164,18 @@
     section{padding:64px 0}
     footer .frow{flex-direction:column; text-align:center}
   }
+
+  /* よみもの（検索の受け皿ページへの導線） */
+  .read{padding:70px 0 10px;background:var(--paper)}
+  .read-list{display:grid;gap:12px;margin-top:26px}
+  .read-item{display:block;text-decoration:none;color:var(--ink);background:var(--paper2);
+    border:1px solid var(--line);border-radius:18px;padding:20px 24px;transition:.2s}
+  .read-item:hover{border-color:var(--gold);transform:translateY(-2px)}
+  .read-item b{display:block;font-size:17px;color:var(--navy);margin-bottom:4px}
+  .read-item span{font-size:14px;color:var(--ink-soft)}
+  .read-item i{display:block;font-style:normal;font-size:13px;color:var(--shu-deep);margin-top:8px}
 </style>
+<!-- LD:START --><script type="application/ld+json">{"@context": "https://schema.org", "@type": "MobileApplication", "name": "毎日般若心経", "inLanguage": "ja", "applicationCategory": "LifestyleApplication", "operatingSystem": "iOS, Android", "url": "https://tagc.works/hannya/", "description": "般若心経を、意味からやさしく学んでとなえられるアプリ。全文を9つの場面に分け、ふりがなとお手本の声をつけました。", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "JPY"}, "installUrl": ["https://apps.apple.com/app/id6775722614", "https://play.google.com/store/apps/details?id=work.tagc.hannya"], "publisher": {"@type": "Organization", "name": "tagc", "url": "https://tagc.works/"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "毎日般若心経", "url": "https://tagc.works/hannya/", "inLanguage": "ja"}</script><!-- LD:END -->
 </head>
 <body>
 
@@ -249,6 +260,55 @@
       <div class="aud-item rv d2"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg></span>写経や読経、瞑想・マインドフルネスに関心がある</div>
       <div class="aud-item rv d3"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg></span>お寺や仏像、和の文化が好き</div>
       <div class="aud-item rv d4"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg></span>心をととのえる時間を、毎日すこし持ちたい</div>
+    </div>
+  </div>
+</section>
+
+<section class="read">
+  <div class="wrap">
+    <p class="eyebrow rv">よみもの</p>
+    <h2 class="sec-title rv d1">般若心経について、もっと知る</h2>
+    <div class="read-list">
+      <a class="read-item rv d1" href="towa/">
+        <b>般若心経とは｜成立と歴史</b>
+        <span>だれが、いつ、なぜ書いたのか。宗派による扱いの違いまで。</span>
+        <i>読む →</i>
+      </a>
+      <a class="read-item rv d2" href="zenbun/">
+        <b>全文（ふりがな・現代語訳つき）</b>
+        <span>262文字の全文を、漢字一字ずつのふりがなと現代語訳で。</span>
+        <i>読む →</i>
+      </a>
+      <a class="read-item rv d3" href="imi/">
+        <b>意味を9つの場面で読み解く</b>
+        <span>「色即是空」から「羯諦羯諦」まで、流れで意味をつかむ。</span>
+        <i>読む →</i>
+      </a>
+      <a class="read-item rv d4" href="yougo/">
+        <b>用語集</b>
+        <span>空・五蘊・波羅蜜多・涅槃など、つまずく言葉をまとめて。</span>
+        <i>読む →</i>
+      </a>
+      <a class="read-item rv d4" href="tonaekata/">
+        <b>唱え方</b>
+        <span>姿勢・速さ・息継ぎ・回数。はじめての方向けの基本。</span>
+        <i>読む →</i>
+      </a>
+      <a class="read-item rv d4" href="oboekata/">
+        <b>覚え方</b>
+        <span>262文字を9つに割って、順番に覚えていく方法。</span>
+        <i>読む →</i>
+      </a>
+      <a class="read-item rv d4" href="shakyo/">
+        <b>写経のやり方</b>
+        <span>道具と手順、書き終えたあと。印刷用の手本つき。</span>
+        <i>読む →</i>
+      </a>
+      <a class="read-item rv d4" href="butsuzo/">
+        <b>仏さま図鑑（30体）</b>
+        <span>如来・菩薩・明王・天のちがいと、それぞれの見分け方。</span>
+        <i>読む →</i>
+      </a>
     </div>
   </div>
 </section>
