@@ -142,6 +142,9 @@
 
   /* ===== footer ===== */
   footer{background:var(--navy-deep); color:rgba(255,255,255,.82); padding:48px 0 40px; font-size:14px}
+  /* 共通フッターの上マージン 44px が、帯の下に白い空白として出るので打ち消す。
+     実体（tools/footer.html）は触らず、ページ側で詳細度を上げて上書きする */
+  body .tagc-footer{margin-top:0}
   footer .frow{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:18px}
   footer .fname{font-family:'Kiwi Maru'; font-size:18px; color:#fff; letter-spacing:.08em}
   footer .fnotes{color:rgba(255,255,255,.6); font-size:12.5px; line-height:2; margin-top:18px; border-top:1px solid rgba(255,255,255,.12); padding-top:18px}
@@ -337,8 +340,7 @@
     </div>
     <p class="fnotes">
       インターネットがなくても使えます。記録はお使いの端末に保存されます。毎日のお知らせ（任意）で続ける後押しをします。<br>
-      ※意味や解説は、分かりやすさを優先したひとつの解釈です。<br>
-      © 2026 毎日般若心経
+      ※意味や解説は、分かりやすさを優先したひとつの解釈です。
     </p>
   </div>
 </footer>

@@ -40,6 +40,9 @@
   .note{background:var(--paper2);border:1px solid var(--line);border-radius:14px;padding:16px 20px;font-size:14px;color:var(--ink-soft)}
   footer{background:var(--navy-deep);color:rgba(255,255,255,.7);font-size:13px;padding:28px 0;text-align:center}
   footer a{color:var(--gold-light);text-decoration:none}
+  /* 共通フッターの上マージン 44px が、帯の下に白い空白として出るので打ち消す。
+     実体（tools/footer.html）は触らず、ページ側で詳細度を上げて上書きする */
+  body .tagc-footer{margin-top:0}
 </style>
 </head>
 <body>
@@ -117,7 +120,7 @@
   </section>
 
 </div></main>
-<footer><div class="wrap">© 2026 毎日般若心経 ｜ <a href="privacy.html">プライバシーポリシー</a></div></footer>
+<footer><div class="wrap"><a href="index.html">毎日般若心経</a> ｜ <a href="privacy.html">プライバシーポリシー</a></div></footer>
 <!-- FOOTER:START このブロックは tools/footer.html から差し込まれます。ページ側で手を入れないこと -->
 <footer class="tagc-footer">
 <style>
