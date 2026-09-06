@@ -92,9 +92,9 @@ h3{margin-top:3px;font-size:20px;font-weight:900;letter-spacing:-.01em;line-heig
 .contact .t{font-size:13px;color:var(--sub)}
 .contact a{font-size:20px;font-weight:700;color:var(--ink);text-decoration:none;
   border-bottom:2px solid var(--accent);padding-bottom:2px}
-footer{padding:36px 0 60px;font-size:11px;color:var(--sub);
-  border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
-footer a{color:var(--sub)}
+/* 共通フッターの上マージン 44px が、帯の下に白い空白として出るので打ち消す。
+   実体（tools/footer.html）は触らず、ページ側で詳細度を上げて上書きする */
+body .tagc-footer{margin-top:0}
 @media (max-width:720px){
   .grid{grid-template-columns:1fr}
   header{padding:52px 0 4px}
@@ -204,10 +204,6 @@ footer a{color:var(--sub)}
   </div>
 </section>
 
-<footer>
-  <span class="mono">© 2026 tagc</span>
-</footer>
-
 </div>
 
 <script>
@@ -229,5 +225,20 @@ footer a{color:var(--sub)}
   });
 })();
 </script>
+<!-- FOOTER:START このブロックは tools/footer.html から差し込まれます。ページ側で手を入れないこと -->
+<footer class="tagc-footer">
+<style>
+/* 各ページの footer{} ルールに巻き込まれないよう、背景と色は明示的に打ち消す。
+   薄くするのは内側だけ。外側に opacity をかけると背景ごと薄くなって濁る */
+.tagc-footer{margin:44px 0 0;padding:0;border:0;background:none;color:inherit;
+  font-family:inherit;font-weight:400;font-size:12px;line-height:2;
+  letter-spacing:0;text-align:center}
+.tagc-footer .in{border-top:1px solid;padding:20px 16px 28px;opacity:.62}
+.tagc-footer a{color:inherit;text-decoration:underline;text-underline-offset:.25em}
+.tagc-footer .s{display:inline-block;width:.9em}
+</style>
+<div class="in">© 2026 <a href="https://tagc.works/">tagc.works</a><span class="s"> </span>生活の困りごとを楽しく解決したい</div>
+</footer>
+<!-- FOOTER:END -->
 </body>
 </html>

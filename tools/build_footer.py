@@ -52,6 +52,7 @@ TARGETS = [
     ("tag-work.github.io/yasumidori/index.html",     "append"),
     ("tag-work.github.io/yasumidori/privacy.html",   "append"),
     ("tag-work.github.io/yasumidori/terms.html",     "append"),
+    ("tag-work.github.io/index.html",                "append"),
 ]
 
 # sw.js の bump が要るリポジトリ（Service Worker が cache-first のため）

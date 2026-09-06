@@ -264,6 +264,8 @@
 <!-- FOOTER:START このブロックは tools/footer.html から差し込まれます。ページ側で手を入れないこと -->
 <footer class="tagc-footer">
 <style>
+/* 各ページの footer{} ルールに巻き込まれないよう、背景と色は明示的に打ち消す。
+   薄くするのは内側だけ。外側に opacity をかけると背景ごと薄くなって濁る */
 .tagc-footer{margin:44px 0 0;padding:0;border:0;background:none;color:inherit;
   font-family:inherit;font-weight:400;font-size:12px;line-height:2;
   letter-spacing:0;text-align:center}
