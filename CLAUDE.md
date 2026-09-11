@@ -133,9 +133,39 @@ python3 hannya/tools/build_pages.py
 - **色・文字・比率・角丸を変えない。**日本語のロケール素材を使う
 - **余白と最小の大きさは、公式ページに書いてある値に従う。**★このファイルに数値は書かない
   （★変わるので、そのつど公式を読むこと）
-- 2つ並べるときは、**同じ高さ**にそろえる
+- **★★2つ並べるときは、同じ高さにそろえる。**★これは好みではなく、**唯一の解**です ──
+  ★Apple は「App Store バッジは他ストアと同じ大きさ以上」、
+  ★Google は「Google Play バッジは他ストアと同じ大きさ以上」と、**両方が同じことを求めます。**
+  ★**App Store を先頭に**（Apple 側の指定）
 - **まだ出していないストアのバッジは、置かない。**「まもなく」を出したいときは、
   バッジではなく文字で書く（★バッジは「そこで買える」という意味だから）
+
+**★素材は `assets/badges/` に1か所**（2026-09-10）。
+
+```
+app-store-badge-ja.svg     Apple の App Store Marketing Tools（black / ja-jp）
+                           公式名 Download_on_the_App_Store_Badge_JP_RGB_blk_100317・108.85×40
+google-play-badge-ja.png   Google Partner Marketing Hub → Get it on Google Play Badges → Digital → png
+                           原名 GetItOnGooglePlay_Badge_Web_color_Japanese.png・270×80
+```
+
+- ★**Google の PNG は、内蔵の余白がゼロ**（270×80 がバッジそのもの）。
+  ★Apple の SVG と**同じ CSS 高さ**にすれば、見た目もそろいます
+- ★★**Google の素材は、ダウンロード前に法的な同意（機密保持・利用条件）のチェックが要ります。**
+  ★**AI が代わりに押しません。**★あれは tagc.works の運営者としての同意です ──
+  ★**人がチェックして Submit する**（2026-09-10。★CC がここで正しく止まりました）
+- ★**読みものページ（`hannya/oboekata/`）は生成物です。**★HTML を手で直さない ──
+  `hannya/tools/build_pages.py` の `cta()` を直して流し直すこと。
+  ★**コミットは2つに分ける**（①スクリプト ②38ページの再生成）
+- ★★**バッジを置いたら、ページ側の `img` 規則が当たっていないか確かめること**（2026-09-11）。
+  ★実際に踏みました ── `build_pages.py` の `.cta img{…border-radius:16px}` は
+  **アプリアイコン用**でしたが、**バッジも `.cta` の中にある**ので角丸を拾い、
+  ★**バッジの角が切れていました。**（★同じ強さなので `width`/`height` だけ上書きされ、
+  ★`border-radius` は上書きされずに残る ── ★いちばん気づきにくい形です）
+  ★見るのは `border-radius` ／ `box-shadow` ／ `filter` ／ `opacity` ／ `border` ／
+  `max-width` ／ `height`。★**CSS を目で追わず、ブラウザの「計算済みスタイル」を読む**
+  ★直しかたは**セレクタを絞る**（`.cta > img`）。★`border-radius:0` で打ち消さない
+    ── ★打ち消しは、届いていること自体を残します
 
 ## 書かないこと
 
