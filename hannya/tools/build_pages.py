@@ -300,7 +300,7 @@ dl.gl dd{font-size:15px}
 .cta p{font-size:13.5px;color:#d9c9a8;margin:0 0 16px}
 .badges{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 .badge{display:inline-block;line-height:0}
-.badge img{height:44px;width:auto;display:block}
+.badge img{height:44px;width:auto;display:block;object-fit:contain}
 .rel{display:grid;gap:10px;margin:20px 0 0}
 .rel a{display:block;background:var(--paper2);border:1px solid var(--line);border-radius:14px;
   padding:14px 18px;text-decoration:none;color:var(--ink)}
