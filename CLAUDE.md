@@ -164,8 +164,21 @@ google-play-badge-ja.png   Google Partner Marketing Hub → Get it on Google Pla
   ★`border-radius` は上書きされずに残る ── ★いちばん気づきにくい形です）
   ★見るのは `border-radius` ／ `box-shadow` ／ `filter` ／ `opacity` ／ `border` ／
   `max-width` ／ `height`。★**CSS を目で追わず、ブラウザの「計算済みスタイル」を読む**
-  ★直しかたは**セレクタを絞る**（`.cta > img`）。★`border-radius:0` で打ち消さない
-    ── ★打ち消しは、届いていること自体を残します
+  ★★**直しかたは、2つの形で違います**（2026-09-11。★はじめ広く書いていて、誤りでした）
+
+```
+① 別の目的の規則が、届いてしまっている      例：.cta img（アプリアイコン用）
+   → ★セレクタを絞る（.cta > img）。★打ち消さない
+     ★打ち消しは、届いていること自体を残します
+
+② 全体リセットの、正当な例外                例：img{max-width:100%}（本文画像用）
+   → ★★例外の側（.badge img）で上書きするのが正しい
+     ★リセットを絞ると、本文画像ぜんぶに響きます ── ★やりすぎです
+```
+
+  ★②で `max-width` を外すときは **`max-width:none` ではなく `object-fit:contain`**。
+  ★`none` は比率を守るかわりに**はみ出して横スクロールが出ます。**
+  ★`contain` なら、★箱が縮んでも**バッジは比率のまま中に収まります**
 
 ## 書かないこと
 
