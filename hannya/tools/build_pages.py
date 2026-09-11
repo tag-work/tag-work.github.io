@@ -298,10 +298,9 @@ dl.gl dd{font-size:15px}
 .cta img{width:64px;height:64px;border-radius:16px}
 .cta h2{border:0;color:#fff8ec;display:block;margin:14px 0 6px;font-size:19px;padding:0}
 .cta p{font-size:13.5px;color:#d9c9a8;margin:0 0 16px}
-.badges{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-.badge{display:inline-block;background:var(--gold);color:#3a2a10;text-decoration:none;
-  font-size:14px;font-weight:700;padding:11px 20px;border-radius:999px}
-.badge small{display:block;font-size:10px;font-weight:400;opacity:.75}
+.badges{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.badge{display:inline-block;line-height:0}
+.badge img{height:44px;width:auto;display:block}
 .rel{display:grid;gap:10px;margin:20px 0 0}
 .rel a{display:block;background:var(--paper2);border:1px solid var(--line);border-radius:14px;
   padding:14px 18px;text-decoration:none;color:var(--ink)}
@@ -419,8 +418,8 @@ def cta(up="../"):
   <h2>お手本の声に合わせて、となえる</h2>
   <p>ふりがな付きの縦書きと、読み上げ。続けた日はカレンダーに残ります。ずっと無料です。</p>
   <div class="badges">
-    <a class="badge" href="{APPSTORE}">App Store<small>でダウンロード</small></a>
-    <a class="badge" href="{PLAY}">Google Play<small>でダウンロード</small></a>
+    <a class="badge" href="{APPSTORE}"><img src="{up}../assets/badges/app-store-badge-ja.svg" alt="App Store でダウンロード"></a>
+    <a class="badge" href="{PLAY}"><img src="{up}../assets/badges/google-play-badge-ja.png" alt="Google Play で手に入れよう"></a>
   </div>
 </div>"""
 

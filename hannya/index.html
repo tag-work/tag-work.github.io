@@ -72,17 +72,8 @@
   .hero .catch{display:block; color:var(--shu-deep)}
   .hero .lead{margin-top:18px; font-size:18px; color:var(--ink-soft); letter-spacing:.04em}
   .badges{display:flex; flex-wrap:wrap; gap:14px; margin-top:34px}
-  .badge{
-    display:inline-flex; align-items:center; gap:10px;
-    background:var(--navy); color:#fff; text-decoration:none;
-    padding:13px 22px; border-radius:14px; font-size:15px; font-family:'Kiwi Maru';
-    box-shadow:0 10px 24px -12px rgba(35,58,94,.6); transition:transform .2s, box-shadow .2s;
-  }
-  .badge:hover{transform:translateY(-2px); box-shadow:0 16px 30px -12px rgba(35,58,94,.6)}
-  .badge.badge-soon{background:#9aa3b2; cursor:default; box-shadow:none; pointer-events:none}
-  .badge.badge-soon:hover{transform:none; box-shadow:none}
-  .badge small{display:block; font-size:10px; opacity:.7; letter-spacing:.1em; font-family:'Zen Maru Gothic'}
-  .badge .soon{font-size:11px; background:var(--gold-light); color:var(--navy-deep); padding:2px 8px; border-radius:99px; margin-left:4px}
+  .badge{display:inline-block; line-height:0}
+  .badge img{height:44px; width:auto; display:block}
 
   /* phone frame */
   .phone{
@@ -189,8 +180,8 @@
       <h1 class="rv d1">毎日般若心経<br><span class="catch">学んで、となえて、仏に近づく。</span></h1>
       <p class="lead rv d2">やさしく学べて、毎日つづく。</p>
       <div class="badges rv d3">
-        <a class="badge" href="https://apps.apple.com/app/id6775722614">App Store<small>でダウンロード</small></a>
-        <a class="badge" href="https://play.google.com/store/apps/details?id=work.tagc.hannya">Google Play<small>でダウンロード</small></a>
+        <a class="badge" href="https://apps.apple.com/app/id6775722614"><img src="../assets/badges/app-store-badge-ja.svg" alt="App Store でダウンロード"></a>
+        <a class="badge" href="https://play.google.com/store/apps/details?id=work.tagc.hannya"><img src="../assets/badges/google-play-badge-ja.png" alt="Google Play で手に入れよう"></a>
       </div>
     </div>
     <div class="hero-art rv d2">
@@ -322,8 +313,8 @@
     <h2 class="rv d1">毎日、般若心経をとなえよう。</h2>
     <p class="free rv d2">ずっと無料でお使いいただけます（アプリ内に広告が表示されます）。</p>
     <div class="badges rv d3" style="justify-content:center">
-      <a class="badge" href="https://apps.apple.com/app/id6775722614">App Store<small>でダウンロード</small></a>
-      <a class="badge" href="https://play.google.com/store/apps/details?id=work.tagc.hannya">Google Play<small>でダウンロード</small></a>
+      <a class="badge" href="https://apps.apple.com/app/id6775722614"><img src="../assets/badges/app-store-badge-ja.svg" alt="App Store でダウンロード"></a>
+      <a class="badge" href="https://play.google.com/store/apps/details?id=work.tagc.hannya"><img src="../assets/badges/google-play-badge-ja.png" alt="Google Play で手に入れよう"></a>
     </div>
   </div>
 </section>
