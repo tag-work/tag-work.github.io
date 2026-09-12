@@ -46,6 +46,7 @@ TARGETS = [
     ("eigo-quiz/for-parents/index.html",             "replace-footer"),
     ("sansu-quiz/for-parents/index.html",            "replace-footer"),
     ("toilet-gacha/for-parents/index.html",          "replace-footer"),
+    ("tokei-quiz/for-parents/index.html",            "replace-footer"),
     ("tag-work.github.io/hannya/index.html",         "append"),
     ("tag-work.github.io/hannya/privacy.html",       "append"),
     ("tag-work.github.io/hannya/terms.html",         "append"),
@@ -56,7 +57,7 @@ TARGETS = [
 ]
 
 # sw.js の bump が要るリポジトリ（Service Worker が cache-first のため）
-SW_REPOS = {"eigo-quiz", "sansu-quiz", "toilet-gacha"}
+SW_REPOS = {"eigo-quiz", "sansu-quiz", "toilet-gacha", "tokei-quiz"}
 
 BLOCK_RE = re.compile(re.escape(START) + r".*?" + re.escape(END), re.S)
 FOOTER_RE = re.compile(r"[ \t]*<footer\b(?![^>]*tagc-footer).*?</footer>\n?", re.S)
